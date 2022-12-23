@@ -1,4 +1,4 @@
-package aqa;
+package aqa.about;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
