@@ -9,7 +9,6 @@ import org.testng.annotations.Test;
 
 public class SignUpTest {
 
-    private String name;
     /*
      Steps to validate:
     1. open browser
