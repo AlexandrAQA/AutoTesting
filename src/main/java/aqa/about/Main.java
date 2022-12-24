@@ -7,7 +7,12 @@ public class Main {
         System.out.println(s);
         System.out.println();
 
-        Taxes taxes = new Taxes();
-        taxes.salaryTax(10000);
+        try {
+            Taxes taxes = new Taxes();
+            taxes.salaryTax(-10000);
+        } catch (IllegalArgumentException argumentException){
+            System.out.println("Please Enter a valid salary: " + argumentException);
+        }
+
     }
 }
