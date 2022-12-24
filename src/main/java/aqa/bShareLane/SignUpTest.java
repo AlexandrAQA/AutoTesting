@@ -40,6 +40,13 @@ public class SignUpTest {
         //Validate displaying "register" button
         Assert.assertTrue(regButton.isDisplayed(),
                 "Sign Up form is not displayed or issue with redirection");
+
+        webDriver.findElement(By.cssSelector("input[name='first_name']")).sendKeys("John");
+        webDriver.findElement(By.cssSelector("input[name='last_name']")).sendKeys("Smith");
+        webDriver.findElement(By.cssSelector("input[name='email']")).sendKeys("johnsmith@gmail.com");
+        webDriver.findElement(By.cssSelector("input[name='password1']")).sendKeys("12345John");
+        webDriver.findElement(By.cssSelector("input[name='password2']")).sendKeys("12345John");
+        regButton.click();
     }
 
 
