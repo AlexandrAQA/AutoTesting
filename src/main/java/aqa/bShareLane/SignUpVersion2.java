@@ -1,34 +1,14 @@
 package aqa.bShareLane;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
-import static org.testng.Assert.*;
 
-public class SignUpVersion2 {
-    public static final String ZIP_CODE_ERROR = "Oops, error on page. ZIP code should have 5 digits";
+public class SignUpVersion2 extends BaseTest {
 
-    public static final String USER_INFO_ERROR = "Oops, error on page." +
-            " Some of your fields have invalid data or email was previously used";
-
-    WebDriver driver;
-
-    @BeforeClass
-    public void setPathToWebDriver() {
-        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
-    }
-
-    @BeforeMethod
-    public void setUp() {
-        driver = new ChromeDriver();
-        driver.get("https://www.sharelane.com/cgi-bin/register.py");
-    }
 
     @Test
     public void zipCodeShouldBevalid() {
@@ -70,14 +50,6 @@ public class SignUpVersion2 {
         assertEquals(errorMsg.getText(), USER_INFO_ERROR, "Error message should be correct");
 
     }
-//    Email:	linda_rao@817.86.sharelane.com
-//    Password:	1111
-//    Email:	brian_gupta@220.46.sharelane.com
-//    Password	1111
 
-    @AfterMethod(alwaysRun = true)
-    public void tearDown() {
-        driver.quit();
-    }
 
 }

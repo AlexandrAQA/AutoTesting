@@ -20,7 +20,7 @@ public class SignUpTest {
     @Test
     public void zipCodeValidator() {
         //system property for web driver
-        System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
         //initiate Chrome web driver
         WebDriver webDriver = new ChromeDriver();
 
