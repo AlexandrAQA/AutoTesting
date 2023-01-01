@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-
 import java.time.Duration;
 
 public class BaseTest {
@@ -24,15 +23,10 @@ public class BaseTest {
 
     @AfterMethod(alwaysRun = true)
     public void tearDown() {
-//        if (driver != null) {
-//            driver.quit();
-//        }
+        if (driver != null) {
+            driver.quit();
+        }
 
     }
-    //    Email:	linda_rao@817.86.sharelane.com
-//    Password:	1111
-//    Email:	brian_gupta@220.46.sharelane.com
-//    Password	1111
-    //    Email:	linda_baker@293.58.sharelane.com
-//    Password:	1111
+
 }
