@@ -24,7 +24,7 @@ public class BaseTest {
         loginPage = new LoginPage(driver);
     }
 
-
+    //Quit driver
     @AfterMethod(alwaysRun = true)
     public void tearDown() {
         if (driver != null) {

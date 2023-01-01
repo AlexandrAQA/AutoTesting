@@ -21,7 +21,7 @@ public class LoginTest extends BaseTest {
     public void validPasswordIsRequiredForLogin(){
         loginPage.openPage();
         loginPage.login("standard_user"," ");
-        assertEquals(loginPage.getERROR(),
+        assertEquals(loginPage.getError(),
                 "Epic sadface: Username and password do not match any user in this service",
                 "THE Error message is incorrect");
 

@@ -27,7 +27,7 @@ public class LoginPage {
         driver.findElement(LOGIN_BUTTON).submit();
     }
 
-    public String getERROR() {
+    public String getError() {
         return driver.findElement(ERROR).getText();
     }
 }
