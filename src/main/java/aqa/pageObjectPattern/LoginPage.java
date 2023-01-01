@@ -8,29 +8,29 @@ import static org.testng.Assert.assertTrue;
 
 public class LoginPage {
 
-  WebDriver driver;
+    WebDriver driver;
 
-  private final By userNameInput = (By.id("user-name"));
-  private final By passwordInput = (By.id("password"));
-  private final By loginButton = (By.id("login-button"));
-  private final By error = (By.cssSelector("h3[data-test=error]"));
+    private final By userNameInput = (By.id("user-name"));
+    private final By passwordInput = (By.id("password"));
+    private final By loginButton = (By.id("login-button"));
+    private final By error = (By.cssSelector("h3[data-test=error]"));
 
-  public LoginPage(WebDriver driver){
-      this.driver = driver;
-  }
+    public LoginPage(WebDriver driver) {
+        this.driver = driver;
+    }
 
-  public void openPage(){
-    driver.get("https://www.saucedemo.com/");
-  }
+    public void openPage() {
+        driver.get("https://www.saucedemo.com/");
+    }
 
-  public void login(String user, String password){
+    public void login(String user, String password) {
 
-    driver.findElement(userNameInput).sendKeys(user);
-    driver.findElement(passwordInput).sendKeys(password);
-    driver.findElement(loginButton).submit();
-  }
+        driver.findElement(userNameInput).sendKeys(user);
+        driver.findElement(passwordInput).sendKeys(password);
+        driver.findElement(loginButton).submit();
+    }
 
-  public String getError() {
-    return driver.findElement(error).getText();
-  }
+    public String getError() {
+        return driver.findElement(error).getText();
+    }
 }
