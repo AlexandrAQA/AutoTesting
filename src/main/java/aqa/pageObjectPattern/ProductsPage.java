@@ -4,14 +4,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class ProductsPage {
+public class ProductsPage extends BasePage{
 
-    WebDriver driver;
+    private final By TITLE = By.cssSelector(".title");
 
-   private final By TITLE = By.cssSelector(".title");
-
-    public ProductsPage( WebDriver driver) {
-        this.driver =  driver;
+    public ProductsPage(WebDriver driver) {
+        super(driver);
     }
 
     public WebElement getTitle(){

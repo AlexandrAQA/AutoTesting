@@ -3,9 +3,7 @@ package aqa.pageObjectPattern;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class LoginPage {
-
-    WebDriver driver;
+public class LoginPage extends BasePage{
 
     private final By USER_NAME_INPUT = (By.id("user-name"));
     private final By PASSWORD_INPUT = (By.id("password"));
@@ -13,7 +11,7 @@ public class LoginPage {
     private final By ERROR = (By.cssSelector("h3[data-test=error]"));
 
     public LoginPage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
     }
 
     public void openPage() {

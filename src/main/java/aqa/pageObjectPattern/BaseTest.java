@@ -11,6 +11,7 @@ import java.time.Duration;
 public class BaseTest {
     WebDriver driver;
     LoginPage loginPage;
+    ProductsPage productsPage;
 
     @BeforeMethod
     public void setUp() {
@@ -22,6 +23,7 @@ public class BaseTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         //Create new Page
         loginPage = new LoginPage(driver);
+        productsPage = new ProductsPage(driver);
     }
 
     //Quit driver
