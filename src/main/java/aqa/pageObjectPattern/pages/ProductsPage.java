@@ -1,4 +1,4 @@
-package aqa.pageObjectPattern;
+package aqa.pageObjectPattern.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

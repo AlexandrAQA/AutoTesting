@@ -1,5 +1,9 @@
-package aqa.pageObjectPattern;
+package aqa.pageObjectPattern.tests;
 
+import aqa.pageObjectPattern.pages.CartPage;
+import aqa.pageObjectPattern.pages.HeaderPage;
+import aqa.pageObjectPattern.pages.LoginPage;
+import aqa.pageObjectPattern.pages.ProductsPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,6 +16,8 @@ public class BaseTest {
     WebDriver driver;
     LoginPage loginPage;
     ProductsPage productsPage;
+    HeaderPage headerPage;
+    CartPage cartPage;
 
     @BeforeMethod
     public void setUp() {
@@ -24,6 +30,8 @@ public class BaseTest {
         //Create new Page
         loginPage = new LoginPage(driver);
         productsPage = new ProductsPage(driver);
+        headerPage = new HeaderPage(driver);
+        cartPage = new CartPage(driver);
     }
 
     //Quit driver

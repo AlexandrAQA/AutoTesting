@@ -1,4 +1,4 @@
-package aqa.pageObjectPattern;
+package aqa.pageObjectPattern.tests;
 
 import org.testng.annotations.Test;
 
