@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Regression Test" parallel="tests" thread-count="2">
-
+<suite name="Smoke Test">
+    <test name="Login test">
+        <classes>
+            <class name="aqa.herokuApp.IframeTest">
+            <methods>
+                <exclude name="iframeTest2"/>
+                <exclude name="iframeTest3"/>
+            </methods>
+            </class>
+        </classes>
+    
+    </test>
 </suite>
